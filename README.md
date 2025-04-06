@@ -66,3 +66,9 @@ I found a Datadog [article](https://docs.datadoghq.com/security/default_rules/ci
 _If the Docker socket is mounted inside a container it could allow processes running within the container to execute Docker commands which would effectively allow for full control of the host._
 
 I found a Docker [article](https://www.docker.com/resources/docker-in-docker-containerized-ci-workflows-dockercon-2023/#:~:text=Docker%2Din%2DDocker%20is%20a,process%20to%20complete%20the%20behavior.) that outlined Docker-in-Docker for containerized CI workdlows.
+
+2. --no-install-recommends
+
+I added this option to the `apt-get install` and it drastically reduced the size of the final Docker image.
+
+`--no-install-recommends` prevents the installation of packages that are recommended but not strictly required.
